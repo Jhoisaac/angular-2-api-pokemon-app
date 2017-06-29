@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.contenedor {
+  margin: 50px;
+}
+
+.poke {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.poke-card {
+  max-width: 300px;
+  max-height: 300px;
+}

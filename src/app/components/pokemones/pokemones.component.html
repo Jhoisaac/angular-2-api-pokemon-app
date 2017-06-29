@@ -1,0 +1,111 @@
+<!--<div class="contenedor">-->
+  <!--<h1>PokeDex: <small>nombre..</small></h1>-->
+
+  <!--<hr>-->
+  <!--<div>-->
+    <!--<button [routerLink]="['/pokemon', 'nuevo']" type="button" class="btn btn-primary">+</button>-->
+  <!--</div>-->
+
+  <!--<table class="table">-->
+    <!--<thead class="thead-inverse">-->
+    <!--<tr>-->
+      <!--<th>#</th>-->
+      <!--<th>Descripcion</th>-->
+      <!--<th>Nombre</th>-->
+      <!--<th>Biografia</th>-->
+      <!--<th>Tipo</th>-->
+      <!--<th>Opciones</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--<tr *ngFor=" let pokemon of pokeDex; let i = index">-->
+      <!--<th>{{i+1}}</th>-->
+      <!--<td><img class="poke" [src]="pokemon.url" alt=""></td>-->
+      <!--<td>{{pokemon.nombre}}</td>-->
+      <!--<td>{{pokemon.bio}}</td>-->
+      <!--<td>{{pokemon.tipo}}</td>-->
+      <!--<td>-->
+        <!--<button [routerLink]="['/pokemon', pokemon.id]" class="btn btn-default btn-primary">-->
+          <!--Editar-->
+        <!--</button>-->
+        <!--<button (click)="eliminar(pokemon.id, i)" class="btn btn-default btn-danger">-->
+          <!--Eliminar-->
+        <!--</button>-->
+      <!--</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  <!--</table>-->
+
+<!--</div>-->
+
+<div class="contenedor">
+  <h1>Game Market: <small>nombre..</small></h1>
+
+  <hr>
+  <div>
+    <button [routerLink]="['/pokemon', 'nuevo']" type="button" class="btn btn-primary">+</button>
+  </div>
+
+  <table class="table table-stripped">
+    <thead class="thead-inverse">
+    <tr>
+      <th>Nro</th>
+      <th>Portada</th>
+      <th>Titulo</th>
+      <th>Reseña</th>
+      <th>Tipo</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor=" let pokemon of pokeDex; let i = index">
+      <th>{{i+1}}</th>
+      <td><img class="poke" [src]="pokemon.url" alt=""></td>
+      <td>{{pokemon.nombre}}</td>
+      <td>{{pokemon.bio}}</td>
+      <td>{{pokemon.tipo}}</td>
+      <td>
+        <button [routerLink]="['/pokemon', pokemon.id]" class="btn btn-default btn-primary">
+          Editar
+        </button>
+        <button (click)="eliminar((pokemon.id), i)" class="btn btn-default btn-danger">
+          Eliminar
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <table class="table table-stripped">
+    <thead class="thead-inverse">
+    <tr>
+      <th>Nro</th>
+      <th>Portada</th>
+      <th>Titulo</th>
+      <th>Reseña</th>
+      <th>Tipo</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor=" let pokemonAPI of pokeDexAPI; let i = index">
+      <th>{{i+1}}</th>
+      <td><img class="poke" [src]="pokemonAPI.url" alt=""></td>
+      <td>{{pokemonAPI.nombre}}</td>
+      <td>{{pokemonAPI.bio}}</td>
+      <td>{{pokemonAPI.tipo}}</td>
+      <td>
+        <button [routerLink]="['/pokemon', pokemonAPI.id]" class="btn btn-default btn-primary">
+          Editar
+        </button>
+        <button (click)="eliminar((pokemonAPI.id), i)" class="btn btn-default btn-danger">
+          Eliminar
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

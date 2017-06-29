@@ -1,0 +1,108 @@
+<!--<h1>Pokemon: <small>{{pokemon.nombre}}..{{pokemon.tipo}}</small></h1>-->
+<!--<div class="card" style="width: 20rem;">-->
+  <!--<img class="card-img-top poke-card" [src]="pokemon.url" alt="pokemon">-->
+
+<!--</div>-->
+<!--<hr>-->
+
+<!--<div class="row">-->
+  <!--<div class="col-md-6 text-right">-->
+    <!--<button [routerLink]="['/pokedex']" type="button" class="btn btn-info"><<</button>-->
+  <!--</div>-->
+  <!--<div class="col-md-6 text-right">-->
+    <!--<button [routerLink]="['/pokemon', 'nuevo']" type="button" class="btn btn-success">Limpiar</button>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="row">-->
+  <!--<div class="col-md-12">-->
+    <!--<form (ngSubmit)="guardar()" #forma="ngForm">-->
+
+      <!--<div class="form-group">-->
+        <!--<label for="nombre">Nombre</label>-->
+        <!--<input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="pokemon.nombre" placeholder="Charizard">-->
+      <!--</div>-->
+
+      <!--<div class="form-group">-->
+        <!--<label for="bio">Bio</label>-->
+        <!--<input type="text" class="form-control" id="bio" name="bio" [(ngModel)]="pokemon.bio" placeholder="Lanza Fuego">-->
+      <!--</div>-->
+
+      <!--<div class="form-group">-->
+        <!--<label for="url">URL</label>-->
+        <!--<input type="text" class="form-control" id="url" name="url" [(ngModel)]="pokemon.url" placeholder="Charizard">-->
+      <!--</div>-->
+
+      <!--<div class="form-group">-->
+        <!--<label for="tipo"></label>-->
+        <!--<select name="tipo" id="tipo" [(ngModel)]="pokemon.tipo" class="custom-select mb-2">-->
+          <!--<option value="Fuego">Fuego</option>-->
+          <!--<option value="Agua">Agua</option>-->
+          <!--<option value="Hierba">Hierba</option>-->
+        <!--</select>-->
+      <!--</div>-->
+
+      <!--<div class="form-group">-->
+        <!--<button  type="submit" class="btn btn-default btn-primary">-->
+          <!--Guardar Cambios-->
+        <!--</button>-->
+      <!--</div>-->
+    <!--</form>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div class="contenedor">
+  <h1>Video Juego: <small>{{pokemon.nombre}}..{{pokemon.tipo}}</small></h1>
+  <div class="card" style="width: 20rem;">
+    <img class="card-img-top poke-card" [src]="pokemon.url" alt="pokemon">
+  </div>
+
+  <hr>
+
+  <div>
+    <div class="col-md-6 text-left">
+      <button [routerLink]="['/pokedex']" type="button" class="btn btn-info"><<</button>
+    </div>
+    <div class="col-md-6 text-right">
+      <button [routerLink]="['/pokemon', 'nuevo']" type="button" class="btn btn-success">Limpiar</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <form (ngSubmit)="guardar()" #forma="ngForm">
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="pokemon.nombre" placeholder="Charizard">
+        </div>
+
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <input type="text" class="form-control" id="bio" name="bio" [(ngModel)]="pokemon.bio" placeholder="Lanza Fuego">
+        </div>
+
+        <div class="form-group">
+          <label for="url">URL</label>
+          <input type="text" class="form-control" id="url" name="url" [(ngModel)]="pokemon.url" placeholder="Charizard">
+        </div>
+
+        <div class="form-group">
+          <label for="tipo"></label>
+          <select name="tipo" id="tipo" [(ngModel)]="pokemon.tipo" class="custom-select mb-2">
+            <option value="Fuego">Fuego</option>
+            <option value="Agua">Agua</option>
+            <option value="Hierba">Hierba</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button  type="submit" class="btn btn-default btn-primary">
+            Guardar Cambios
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
